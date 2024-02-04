@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="./asset/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+  <!-- CSS link -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Font Awesome link -->
+  <link rel="stylesheet" href="./asset/fonts/css/all.min.css" />
+  <title>Hudson Furnishing</title>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- nav section -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Hudson Furnishings</a>
+      <button class="visitors">Visitors <span id="counter">0</span></button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Hudson Furnishings
+          </h5>
+          <button type="button" class="btn-close text-reset Close border-dark text-danger" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product-container">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header section -->
+
+  <main>
+    <div class="contain">
+      <section id="carousel">
+
+        <div class="slide active col-md-12">
+          <img src="./img/slide 1.jpg" alt="furniture" />
+
+          <div class=" info">
+            <h2>Hudson Furnishings</h2>
+            <p>
+              Transform your space with Hudson Furnishing's exquisite and
+              bespoke designs, blending modern elegance with timeless
+              craftsmanship for a luxurious and inviting ambiance.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide col-md-12">
+          <img src="./img/slide 2.jpg" alt="furniture" />
+          <div class="info ">
+            <h2>Luxury at It's Peak</h2>
+            <p>
+              Elevate your space with Hudson Furnishings, where timeless
+              elegance meets contemporary comfort. Our curated collection of
+              furniture and decor blends sophistication and functionality,
+              creating an inviting ambiance that transcends trends. Discover
+              inspired living at Hudson Furnishings today.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide col-md-12">
+          <img src="./img/slide 3.jpg" alt="furniture" />
+          <div class="info">
+            <h2>Premium Services</h2>
+            <p>
+              Transform your home into a haven with Hudson Furnishings. Immerse
+              yourself in quality craftsmanship and stylish designs that
+              redefine comfort. Elevate your lifestyle with our curated
+              selection, where every piece tells a story of elegance and
+              functionality. Experience the art of living at Hudson Furnishings.
+            </p>
+          </div>
+        </div>
+
+        <div class="navigation">
+          <div class="button active"></div>
+          <div class="button"></div>
+          <div class="button"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- popup section -->
+  <section class="popup d-none" id="popup">
+    <div class="backdrop w-100 h-100" onclick="togglePopup();"></div>
+    <div class="popup-card shadow p-3">
+      <img src="" alt="" id="img" class="rounded w-100 bg-light">
+      <h4 class="my-2" id="title">Hello world</h4>
+      <p class="text-xs" id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quidem
+        molestias nulla excepturi odit mollitia tenetur necessitatibus rem dolores nam reprehenderit provident, quam
+        culpa ab aliquid eligendi enim minus nostrum?</p>
+      <div class="d-flex gap-1">
+        <div class="fw-bold w-100 text-center pt-2" id="price">#10000</div>
+        <button class="btn-success btn w-100">Buy Now</button>
+      </div>
+    </div>
+
+
+
+    
+  </section>
+  <main>
+
+    
+    <!-- hero section -->
+    <section id="product-container">
+      <div class="container col-md-12 mx-auto">
+        <!-- Center the product section -->
+        <div class="product-item col-lg-12">
+          <h1 class="product-title">Our Products</h1>
+        </div>
+        <button class="btn btn-default filter-button" data-filter="all">
+          All
+        </button>
+        <button class="btn btn-default filter-button" data-filter="bedroom">
+          Bedroom
+        </button>
+        <button class="btn btn-default filter-button" data-filter="sofa">
+          Sofa
+        </button>
+        <button class="btn btn-default filter-button" data-filter="Chairs">
+          Nook 
+        </button>
+        <button class="btn btn-default filter-button" data-filter="kitchen">
+          Kitchen
+        </button>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 px-2">
+          <div class="card bg-light filter sofa" data-index="1"
+            data-description="
+            Transform your living space with our exquisite sofa furnishings, where comfort meets style. Elevate your home's ambiance with our curated collection, blending quality craftsmanship with contemporary design.">
+            <img src="./img/img3.png" alt=""  height="222px"  />
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$100</span><br />
+              <span class="fs-5" id="title">Sofa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter Chairs" data-index="2" data-description="
+          Nook Chairs offer a perfect blend of comfort and style, designed to fit seamlessly into hallways or transitional spaces. With their compact yet cozy design, these chairs create inviting nooks for reading or relaxation, adding a touch of warmth to any corridor setting.">
+            <img src="./img/chair.png" alt=""  height="222px"  />
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$200</span><br />
+              <span class="fs-5" id="title">Nook Chairs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter bedroom" data-index="3" data-index="1"
+            data-description="
+            Bedroom furniture is the epitome of tranquility and elegance, providing a haven for rest and rejuvenation. From luxurious bed frames to spacious wardrobes, our collection combines exquisite craftsmanship with thoughtful design, ensuring a harmonious and stylish retreat for a blissful night's sleep.">
+            <img src="./img/bed-6-removebg-preview.png" alt=""  height="222px"  />
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$5500</span><br />
+              <span class="fs-5" id="title">Bedroom Furniture</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter sofa" data-index="4" data-index="1"
+            data-description="Discover unparalleled elegance for your living room with our premium parlour seats. Designed for both comfort and style, our sofas and couches redefine relaxation in your home.">
+            <img src="./img/Design_Furniture___Accessories___Next_UK-removebg-preview.png" alt="" height="222px" />
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$1000</span><br />
+              <span class="fs-5" id="title">Coush</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter bedroom" data-index="5" data-index="1"
+            data-description="vj vv v wn vwvn jkn e j n e n  d jknjn e ee keken en j ne">
+            <img src="./img/bed-0-removebg-preview.png" alt="" height="222px" />
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$100</span><br />
+              <span class="fs-5" id="title">bed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter Chairs" data-index="6" data-index="1"
+            data-description="Revolutionize your kitchen experience with the SpeedChef, an advanced culinary companion that quickly and efficiently heats your meals to perfection, making every cooking moment a breeze. Its sleek design and cutting-edge technology redefine convenience, ensuring that your food is ready in a flash.">
+            <img src="./img/Design_Furniture___Accessories___Next_UK__1_-removebg-preview.png" alt="" height="222px"/>
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$500</span><br />
+              <span class="fs-5" id="title">Dinning seat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter kitchen" data-index="7" data-index="1"
+            data-description="Revolutionize your kitchen experience with the SpeedChef, an advanced culinary companion that quickly and efficiently heats your meals to perfection, making every cooking moment a breeze. Its sleek design and cutting-edge technology redefine convenience, ensuring that your food is ready in a flash.">
+            <img src="./img/Black_Microwave_Oven-removebg-preview.png" alt="" height="222px" />
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$5000</span><br />
+              <span class="fs-5" id="title">
+                RadianceWave.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 px-2 mt-3">
+          <div class="card bg-light filter kitchen" data-index="" data-index="1"
+            data-description="
+            Experience unparalleled convenience with our state-of-the-art microwave ovens. Effortlessly prepare delicious meals in minutes, as these compact culinary marvels redefine fast and efficient cooking in your kitchen.">
+            <img src="./img/Delonghi_Oven-removebg-preview.png" alt=""  height="222px"/>
+            <div class="card-body text-start p-2">
+              <div class="star text-start">
+                <i class="fas fa-star text-l"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="fw-normal" id="price">$1000</span><br />
+              <span class="fs-5" id="title">Microwave</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- About us section-->
+    <div class="about-us-container justify-content-start align-item-start">
+      <div class="about-us">
+        <div class="row">
+          <div class="col-md-7 about-content text-start">
+              <h3 class="about-heading" id="about-section">About us</h3>
+              <p class="about-paragraph">
+                Hudson furnishing is a one-stop destination for all home furniture needs, specializing in various categories such as bedroom, sofa, mattress, and kitchen furniture, with a focus on interior design. They are the exclusive Palliser custom order studio, offering over 300 fabrics or leathers for customization. The store aims to simplify the shopping experience by providing easy navigation through showrooms, showcasing designer furniture crafted with passion and attention to detail. The goal is to alleviate the stress associated with the abundance of furniture choices, offering a pleasant shopping experience. The shop intends to inspire home décor ideas and help customers turn their houses into comfortable homes.</p>
+              <a href="" class="about-link btn btn-success">Read More</a>
+          </div>
+    
+          <div class="col-lg-5">
+            <img src="./img/pexels-sharath-g-2600929.jpg" class="about-img" alt="about_img" width="250px" height="250px">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+      <!-- faq section -->
+      <section class="container py-4">
+      <div class="">
+        <h3 style="margin-top: 20px; text-align: center; color: black;">Frequently Asked questions </h3>
+      </div>  
+      <div class="accordion accordion-flush">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              What exclusive promotions or discounts are currently available?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> Prospective buyers often want to know if there are any special promotions, discounts, or exclusive offers on luxury furniture. Inquiring about ongoing sales events or limited-time offers can be a key question for someone looking to make a purchase.</div>
+    
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Can you provide more details about financing options or payment plans?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">For those interested in luxury furniture, questions about financing and payment options become crucial. They might want to explore flexible payment plans, financing terms, or any other arrangements that make acquiring high-end furniture more manageable.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Are there upcoming releases or new collections?
+               </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Enquiring about upcoming releases or new collections is a way for potential buyers to stay informed about the latest offerings. This question allows them to explore the possibility of acquiring the latest and most exclusive pieces in the luxury furniture line.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <!-- contact section -->
+    <div class="container justify-content-start align-items-start" id="contact-section">
+      <div class="row py-5 g-3">
+        <div class="col-md-6 ">
+          <h1>Contact us</h1>
+          <form class="p-4 mt-5 text-start">
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label fw-bold">Address</label>
+              <input type="email" class="form-control" id="address" placeholder="APTECH OWERRI">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bold">Message</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-success">Send Now</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="mapouter w-100"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=owerri%20orchard&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div></div>
+        </div>
+      </div>   
+</div>
+
+<!-- footer section -->
+<footer class="bg-sucess text-center text-lg-start">
+  <div class="text-center p-3 bg-success text-light">
+    © 2024 Copyright:
+    <a class="text-light text-decoration-none" href="https://mdbootstrap.com/">Hudson Furnishing</a>
+  </div>
+</footer>
+  
+    </section>
+    <script src="./asset/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+
+    <script>
+
+      // tab and filter
+
+      $(document).ready(function () {
+        $(".filter-button").click(function () {
+          let value = $(this).attr("data-filter");
+          if (value == "all") {
+            $(".filter").show("1000");
+          } else {
+            $(".filter")
+              .not("." + value)
+              .hide("3000");
+            $(".filter")
+              .filter("." + value)
+              .show("3000");
+          }
+
+          // Add and remove the 'active' class
+          $(".filter-button").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+
+    <!-- faq JS-->
+    <script>
+      function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        if (answer.style.display === "none") {
+          answer.style.display = "block";
+        } else {
+          answer.style.display = "none";
+        }
+      }
+    </script>
+
+    <!-- nav bar js -->
+    <script>
+      document.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 500) { // Adjust the scroll position threshold as needed
+          navbar.classList.add("fixed");
+        } else {
+          navbar.classList.remove("fixed");
+        }
+      });
+
+
+    </script>
+</body>
+
+</html>
